@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF‑8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Live TV Player - Advanced</title>
+  <link rel="icon" href="logo.png">
+  <meta name="theme-color" content="#ff6f00">
+  <!-- Plyr or Video.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr/dist/plyr.css" />
+  <link rel="stylesheet" href="styles.css" />
+ </head>
+<body data-theme="dark">
+  <div class="container">
+    <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+    <h1>Live TV Player</h1>
+    <input id="search" class="search-input" type="text" placeholder="Search channels…" />
+    <div id="loading" class="loader"><div class="spinner"></div> Loading channels…</div>
+    <div id="channel-list" class="channel-list" aria-live="polite"></div>
+
+    <!-- Player UI -->
+    <div id="player-card" class="player-card hidden" role="dialog" aria-modal="true">
+      <div class="card-header">
+        <img id="channel-logo" alt="Channel Logo">
+        <h2 id="channel-title">Now Playing</h2>
+        <button id="closePlayer" class="close-btn" aria-label="Close">✖</button>
+      </div>
+      <div class="card-video">
+        <video id="videoPlayer" playsinline controls autoplay muted></video>
+      </div>
+      <div id="subtitle-selector" class="selector"></div>
+    </div>
+
+    <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js/dist/hls.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/plyr/dist/plyr.polyfilled.js"></script>  
+  <script src="script.js"></script>
+  </body>
+</html>
