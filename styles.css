@@ -194,7 +194,7 @@ h1 {
 /* PLAYER CARD */
 .player-card {
   background: var(--background-card);
-  margin: 44px auto 24px;
+  margin: 24px auto 24px;
   width: 90%;
   max-width: 980px;
   border-radius: 16px;
